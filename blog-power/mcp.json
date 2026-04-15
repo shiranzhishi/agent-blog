@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "blog-server": {
+      "command": "node",
+      "args": ["D:/my-project/my-vue3-app/mcp-blog-server/dist/index.js"],
+      "env": {
+        "BLOG_EMAIL": "jishenghao@qq.com",
+        "BLOG_PASSWORD": "12345",
+        "BLOG_API_URL": "http://localhost:3000/api"
+      },
+      "disabled": false,
+      "autoApprove": ["list_posts", "update_credentials", "create_post", "update_post", "publish_post"]
+    }
+  }
+}

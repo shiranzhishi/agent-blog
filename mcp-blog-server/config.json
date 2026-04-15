@@ -1,0 +1,7 @@
+{
+  "credentials": {
+    "email": "jishenghao@qq.com",
+    "password": "12345"
+  },
+  "apiBaseUrl": "http://localhost:3000/api"
+}

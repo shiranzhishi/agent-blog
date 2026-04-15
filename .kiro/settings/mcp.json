@@ -1,0 +1,15 @@
+﻿{
+  "mcpServers": {
+    "blog-server": {
+      "command": "node",
+      "args": ["./mcp-blog-server/dist/index.js"],
+      "env": {
+        "BLOG_API_URL": "http://localhost:3000/api",
+        "BLOG_EMAIL": "jishenghao@qq.com",
+        "BLOG_PASSWORD": "12345"
+      },
+      "disabled": false,
+      "autoApprove": ["list_posts", "create_post", "update_post", "publish_post", "update_credentials"]
+    }
+  }
+}
