@@ -136,8 +136,8 @@ import { Empty } from 'ant-design-vue';
 import { PlusOutlined } from '@ant-design/icons-vue';
 import { postAPI, userAPI, type Post, type User, type SearchFilters } from '../services/api';
 import { useAuthStore } from '../stores/authStore';
-import ContentTruncation from './ContentTruncation.vue';
-import SearchFilter from './SearchFilter.vue';
+import ContentTruncation from '../components/ContentTruncation.vue';
+import SearchFilter from '../components/SearchFilter.vue';
 import { markdownPreloader } from '../services/markdownPreloader';
 
 const router = useRouter();

@@ -7,68 +7,68 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'Home',
-    component: () => import('../components/PostList.vue')
+    component: () => import('../views/PostList.vue')
   },
   {
     path: '/posts',
     name: 'PostList',
-    component: () => import('../components/PostList.vue'),
+    component: () => import('../views/PostList.vue'),
     meta: { requiresAuth: true }
   },
   {
     path: '/posts/create',
     name: 'PostCreate',
-    component: () => import('../components/PostCreate.vue'),
+    component: () => import('../views/PostCreate.vue'),
     meta: { requiresAuth: true }
   },
   {
     path: '/posts/:id/edit',
     name: 'PostEdit',
-    component: () => import('../components/PostCreate.vue'),
+    component: () => import('../views/PostCreate.vue'),
     props: true,
     meta: { requiresAuth: true }
   },
   {
     path: '/posts/:id',
     name: 'PostDetail',
-    component: () => import('../components/PostDetail.vue'),
+    component: () => import('../views/PostDetail.vue'),
     props: true,
     meta: { requiresAuth: true }
   },
   {
     path: '/login',
     name: 'Login',
-    component: () => import('../components/Login.vue'),
+    component: () => import('../views/Login.vue'),
     meta: { requiresGuest: true }
   },
   {
     path: '/register',
     name: 'Register',
-    component: () => import('../components/Register.vue'),
+    component: () => import('../views/Register.vue'),
     meta: { requiresGuest: true }
   },
   {
     path: '/users',
     name: 'UserList',
-    component: () => import('../components/UserList.vue'),
+    component: () => import('../views/UserList.vue'),
     meta: { requiresAuth: true, requiresAdmin: true }
   },
   {
     path: '/profile',
     name: 'Profile',
-    component: () => import('../components/Profile.vue'),
+    component: () => import('../views/Profile.vue'),
     meta: { requiresAuth: true }
   },
   {
     path: '/about',
     name: 'About',
-    component: () => import('../components/About.vue')
+    component: () => import('../views/About.vue')
   },
   // 404 错误处理
   {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
-    component: () => import('../components/NotFound.vue')
+    component: () => import('../views/NotFound.vue')
   }
 ];
 

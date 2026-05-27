@@ -107,7 +107,7 @@
 import { ref, computed, onMounted, onUnmounted } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { UserOutlined } from '@ant-design/icons-vue';
-import OptimizedMarkdownRenderer from './OptimizedMarkdownRenderer.vue';
+import OptimizedMarkdownRenderer from '../components/OptimizedMarkdownRenderer.vue';
 import { postAPI, type Post } from '../services/api';
 import { useAuthStore } from '../stores/authStore';
 
