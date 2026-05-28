@@ -149,6 +149,37 @@ export const postAPI = {
   publish: (id: number) => api.patch(`/posts/${id}/publish`),
 };
 
+// 博客问答相关API
+export interface ChatSource {
+  id: number;
+  title: string;
+  snippet: string;
+  score: number;
+}
+
+export interface ChatAskResponse {
+  question: string;
+  answer: string;
+  sources: ChatSource[];
+}
+
+export interface ChatIndexStatus {
+  totalPublished: number;
+  indexed: number;
+  notIndexed: number;
+  inMemory: number;
+}
+
+export const chatAPI = {
+  // 提问
+  ask: (question: string, topK = 3): Promise<{ data: ChatAskResponse }> =>
+    api.post('/chat/ask', { question, topK }),
+  // 查看索引状态
+  status: (): Promise<{ data: ChatIndexStatus }> => api.get('/chat/status'),
+  // 重建索引（仅管理员）
+  rebuildIndex: (force = false) => api.post('/chat/rebuild-index', { force }),
+};
+
 // 更新类型定义
 export interface User {
   id: number;

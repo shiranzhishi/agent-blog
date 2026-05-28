@@ -56,9 +56,9 @@
 
     <!-- 开发工具 - 仅在开发环境显示 -->
     <MarkdownDevTools v-if="isDevelopment" />
-    
-    <!-- 全局反馈组件 -->
-    <GlobalFeedback ref="globalFeedback" />
+
+    <!-- 博客小助手（右下角浮窗） -->
+    <ChatBot />
   </a-layout>
 </template>
 
@@ -67,6 +67,7 @@ import { computed } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import { useAuthStore } from './stores/authStore'
 import MarkdownDevTools from './components/MarkdownDevTools.vue'
+import ChatBot from './components/ChatBot.vue'
 
 const router = useRouter()
 const route = useRoute()

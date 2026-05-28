@@ -6,6 +6,7 @@ import userRoutes from './routes/users';
 import postRoutes from './routes/posts';
 import authRoutes from './routes/auth';
 import profileRoutes from './routes/profile';
+import chatRoutes from './routes/chat';
 import path from 'path';
 
 dotenv.config();
@@ -55,6 +56,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/posts', postRoutes);
 app.use('/api/profile', profileRoutes);
+app.use('/api/chat', chatRoutes);
 
 // 错误处理中间件
 app.use((err: Error, req: express.Request, res: express.Response, next: express.NextFunction) => {
